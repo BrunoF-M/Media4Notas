@@ -51,30 +51,40 @@ namespace Media4Notas
                 Console.WriteLine("\nDigite somente notas entre 0 e 10.\n");
                 Environment.Exit(-1);
             }
-            double result;
-            double resultfinal;
             
-            result = (not1 + not2 + not3 + not4);
-            resultfinal = (result /4);
+            double result;
 
+            result = (not1 + not2 + not3 + not4) /4;
 
-            if (resultfinal >= 5 || resultfinal >= 6 )
+            if (result >= 7)
             {
-                Console.WriteLine($"\nVocê ficou com média {resultfinal} Resultado: Em recuperação");
+                Console.WriteLine($"\nVocê ficou com média {result:N1} Resultado: Aprovado");
+                Console.WriteLine();
+                Console.Write("Orbigado por usar e até o ano que vem ;)... ");
+                Console.ReadKey();
+                Console.Clear();
+                Environment.Exit(-1);
             }
-            if (resultfinal > 4 )
+            else if (result >= 5 && result <= 6)
             {
-                Console.WriteLine($"\nVocê ficou com média {resultfinal} Resultado: Reprovado");
+                Console.WriteLine($"\nVocê ficou com média {result:N1} Resultado: Em recuperação");
+                Console.WriteLine();
+                Console.Write("Orbigado por usar e até o ano que vem ;)... ");
+                Console.ReadKey();
+                Console.Clear();
+                Environment.Exit(-1);
             }
-            if (resultfinal < 6 )
+            else if (result >= 4)
             {
-                Console.WriteLine($"\nVocê ficou com média {resultfinal} Resultado: Aprovado");
+                Console.WriteLine($"\nVocê ficou com média {result:N1} Resultado: Reprovado");
+                Console.WriteLine();
+                Console.Write("Orbigado por usar e até o ano que vem ;)... ");
+                Console.ReadKey();
+                Console.Clear();             
+                Environment.Exit(-1);
             }
-
-            Console.WriteLine();
-            Console.Write("Orbigado por usar e até o ano que vem ;)... ");
-            Console.ReadKey();
-            Console.Clear();
         }
     }
 }
+
+//pqp isso demorou 3 dias pra fazer que capeta diferente me da 10 nery 
